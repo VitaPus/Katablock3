@@ -4,6 +4,12 @@ body {
     font-family: "TT Lakes", "Verdana", sans-serif;
     color: #000;
 }
+main {
+  Width: 320px;
+  Height: 509px;
+  padding-top: 88px;
+  background:red;
+}
 .page-header {
   /* menuback */
 width: 320px;
