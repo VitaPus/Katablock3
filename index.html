@@ -2,29 +2,57 @@
 <html lang="ru">
 
 <head>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link href="font\stylesheet.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <header class="page-header">
-        <button class="burger page-header__burger" type="button"><img src="icon/burger.svg" alt="меню"></button>
-        <section class="logo page-header__logo"><img src="icon/Group.svg" alt="логотип"></section>
-        <section class="divider page-header__divider"><img src="icon/divider.svg"></section>
-        <button class="page__button"><img src="icon/repair.svg" alt="оставить заявку"></button>
-        <button class="page__button"><img src="icon/checkstatus.svg" alt="статус ремонта"></button>
-    </header>
-    <main class="main">
-        <h1><img src="icon\highlight.svg" alt="">Услуги и сервисы</h1>
-        <nav>Ремонтируемые устройства</nav>
-        <nav>Дополнительные услуги</nav>
-        <section class="about">
-            <p> Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
-                отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-            <p>Читать далее</p>
-        </section>
-        <img src="icon\_MG_3223.png" alt="фото scp">
+    <section class="page">
+        <header class="page-header">
+            <div class="page-header__left">
+                <button class="page-header__burger" type="button"><img src="icon/burger.svg" alt="меню"></button>
+                <section class="page-header__logo"><img src="icon/Group.svg" alt="логотип"></section>
+            </div>
+            <div class="page-header__right">
+                <ul class="page-header__right-active">
+                    <li><button class="page__button"><img src="icon\call.svg"></button></li>
+                    <li><button class="page__button"><img src="icon\chat.svg" alt=""></button></li>
+                    <li><button class="page__button"><img src="icon\profile.svg"></button></li>
+                </ul>
+                <button class="page__button"><img src="icon/repair.svg" alt="оставить заявку"></button>
+                <button class="page__button"><img src="icon/checkstatus.svg" alt="статус ремонта"></button>
+            </div>
+        </header>
+        <main class="main">
+            <h1>Услуги и сервисы</h1>
+            <nav class="navigation main__navigation">
+                <button class="button main__navigation" type="button">Ремонтируемые устройства</button>
+                <button class="button main__navigation" type="button">Дополнительные услуги</button>
+                <button class="button main__navigation" type="button">Цены на услуги</button>
+                <button class="button main__navigation" type="button">Специальные цены</button>
+                <button class="button main__navigation" type="button">Адреса сервисных центров</button>
+                <button class="button main__navigation" type="button">Отзывы</button>
+            </nav>
+            <div class="about">
+                <div class="about__content">
+                    <p class="text__about">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только
+                        у
+                        нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                        
+                        <br>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое 
+                        количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, 
+                        советуют нас родным и близким.</p>
+                    <button class="about__button" type="button"><img src="icon\expand.svg"
+                            class="about__button-img">Читать
+                        далее</button>
+                </div>
 
-    </main>
+                <img src="icon\_MG_3223.png" alt class="about__img">
+            </div>
+        </main>
+    </section>
 </body>
 
 </html>
