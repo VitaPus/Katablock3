@@ -21,7 +21,7 @@ body {
 
 .page-header__left {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 15px;
     margin-left: 1rem;
@@ -35,19 +35,16 @@ body {
     padding: 0;
     border: none;
 }
-
-.page-header__left:after {
-    content: " ";
-    width: 2px;
-    height: 32px;
-    background: #e6dcdc;
-    border-radius: 1px;
-    margin-left: 15px;
+.page-header-divider {
+    display: none;
 }
 
 .page-header__logo {
+    display: flex;
     width: 96.55px;
     height: 50.81px;
+    justify-items: center;
+    align-items: center;
 }
 
 .page__button {
@@ -63,8 +60,17 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     margin-right: 1rem;
+}
+
+.page-header__right:before {
+    content: " ";
+    width: 2px;
+    height: 32px;
+    background: #e6dcdc;
+    border-radius: 1px;
+    margin-left: 16px;
 }
 
 .page-header__right-active {
@@ -75,11 +81,19 @@ body {
     background-color: #F8F8F8;
 }
 
+.main__menu {
+    display: flex;
+}
+
+.main__title-button {
+    display: none;
+}
+
 h1 {
     width: 304px;
     height: 40px;
     text-align: left;
-    margin-top: 0;
+    margin-top: 16px;
     font-size: 28px;
     line-height: 40px;
     letter-spacing: -0.6px;
@@ -95,10 +109,11 @@ h1 {
     width: 100%;
     justify-content: space-between;
     white-space: nowrap;
+    font-family: "TT Lakes", "Verdana", sans-serif;
 }
 
 .button {
-    width: 246px;
+    width: 248px;
     height: 40px;
     margin-right: 10px;
     margin-left: 15px;
@@ -127,6 +142,9 @@ h1 {
     overflow: hidden;
     height: 120px;
     line-height: 24px;
+    margin: 16px;
+    text-align: start;
+    font-family: "TT Lakes", "Verdana", sans-serif;
 }
 
 .about__button {
@@ -155,15 +173,27 @@ h1 {
 .about__button-img {
     width: 24px;
     height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-family: "TT Lakes", "Verdana", sans-serif;
 
 
 }
 
-
 @media (min-width: 784px) {
+
     .page-header {
         width: 768px;
         height: 88px;
+    }
+
+    .page-header__left {
+        gap: 15px;
+    }
+
+    .page-header-divider {
+        display: block;
     }
 
     .page-header__right-active {
@@ -175,15 +205,25 @@ h1 {
     .page-header__right-active:after {
         content: " ";
         width: 2px;
-        height: auto;
+        height: 32px;
         background: #e6dcdc;
         border-radius: 1px;
         margin-left: 15px;
+        margin-top: 6px;
+    }
+
+    .page-header__right:before {
+        display: none;
+    }
+
+    .main__title-button {
+        display: none;
     }
 
     .about__img {
         width: 360px;
         height: 208px;
+        border-radius: 6px;
     }
 
     .about {
@@ -191,14 +231,65 @@ h1 {
         gap: 53px;
     }
 
+    .text__about {
+        width: 312px;
+        height: 200px;
+        margin: 16px;
+        text-align: start;
+    }
+
 }
 
 @media (min-width: 1120px) {
     .about__img {
         width: 531.35px;
-        height: 383.24px;
+        height: 307px;
         gap: 0px;
         opacity: 0px;
 
+    }
+
+    .page-header {
+        display: none;
+    }
+
+    .main__menu {
+        justify-content: space-between;
+    }
+
+    .main__title-button {
+        display: flex;
+        margin-right: 1rem;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .main__button {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border: none;
+        background-color: #F8F8F8;
+        gap: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        align-self: right;
+        font-family: "TT Lakes", "Verdana", sans-serif;
+    }
+
+    .text__about {
+        width: 490px;
+        height: 162px;
+        margin-left: 35px;
+        margin-bottom: 13px;
+    }
+
+    .about__button {
+        margin: 16px;
+    }
+    .about__img {
+        border-radius: 6px;
     }
 }
