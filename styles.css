@@ -60,11 +60,11 @@ body {
     padding-left: 24px;
 }
 
-a.button-main__navigation.active {
+a.button-main__navigation.active:hover {
     color: #7e7e82;
 }
 
-a.button-main__navigation.active:before {
+a.button-main__navigation.active:hover::before {
     content: "";
     height: 32px;
     width: 4px;
